@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 <div class="container">
-  <h2>Woman's Top</h2>  
+  <h2><asp:Literal runat="server" Text="<%$Resources:Resource, WomenTop %>" /></h2>  
 
     <div class="panel panel-primary">
       <div class="panel-heading">Shirts</div>

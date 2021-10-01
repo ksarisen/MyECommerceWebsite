@@ -34,31 +34,31 @@
                 </div>
                 <div class ="navbar-collapse collapse">
                     <ul class ="nav navbar-nav navbar-right">
-                        <li ><a href ="Default.aspx">Home</a> </li>
-                         <li ><a href="Default.aspx">About</a> </li>
-                        <li ><a href ="#">Contact US</a> </li>
+                        <li ><a href ="Default.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Home %>" /></a> </li>
+                         <li ><a href="Default.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, About %>" /></a> </li>
+                        <li ><a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, ContactUs %>" /></a> </li>
                         <li class ="drodown">
-                            <a href ="#" class ="dropdown-toggle" data-toggle="dropdown">Products<b class ="caret"></b></a>
+                            <a href ="#" class ="dropdown-toggle" data-toggle="dropdown"><asp:Literal runat="server" Text="<%$Resources:Resource, Products %>" /><b class ="caret"></b></a>
                             <ul class ="dropdown-menu ">
                                 
-                                <li> <a href ="AddProduct.aspx">Add Product</a></li>
+                                <li> <a href ="AddProduct.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, AddProduct %>" /></a></li>
                                
                             </ul>
 
                         </li>
                         <li class ="drodown" >
-                                     <a href ="#" class ="dropdown-toggle" data-toggle="dropdown">Manage <b class ="caret"></b></a> 
+                                     <a href ="#" class ="dropdown-toggle" data-toggle="dropdown"><asp:Literal runat="server" Text="<%$Resources:Resource, Manage %>" /> <b class ="caret"></b></a> 
                                      <ul class ="dropdown-menu">
-                                         <li ><a href ="AddBrand.aspx">Add Brand</a> </li>
-                                         <li ><a href ="AddCategory.aspx">Add Category</a> </li>
-                                        <li ><a href ="SubCategory.aspx">Add SubCategory</a> </li>
-                                        <li ><a href ="AddGender.aspx">Add Gender</a> </li>
-                                        <li ><a href ="AddSize.aspx">Add Size</a> </li>
+                                         <li ><a href ="AddBrand.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, AddBrand %>" /></a> </li>
+                                         <li ><a href ="AddCategory.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, AddCategory %>" /></a> </li>
+                                        <li ><a href ="SubCategory.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, AddSubCategory %>" /></a> </li>
+                                        <li ><a href ="AddGender.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, AddGender %>" />r</a> </li>
+                                        <li ><a href ="AddSize.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, AddSize %>" /></a> </li>
                                          <li role="separator" class ="divider "></li> 
-                                         <li ><a href ="EditBrand.aspx">Edit Brand</a> </li>
-                                         <li ><a href="EditCategory.aspx">Edit Category</a> </li>
-                                         <li ><a href="EditSubCategory.aspx">Edit SubCategory</a> </li>
-                                         <li ><a href="EditSize.aspx">Edit Size</a> </li>
+                                         <li ><a href ="EditBrand.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, EditBrand %>" /></a> </li>
+                                         <li ><a href="EditCategory.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, EditCategory %>" /></a> </li>
+                                         <li ><a href="EditSubCategory.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, EditSubCategory %>" /></a> </li>
+                                         <li ><a href="EditSize.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, EditSize %>" /></a> </li>
                                          <li role="separator" class ="divider "></li> 
                                       </ul>
                         </li>
@@ -66,7 +66,11 @@
 
 
                         <li >
-                            <asp:Button ID="btnAdminlogout" CssClass ="btn btn-default navbar-btn " runat="server" Text="Sign Out" OnClick="btnAdminlogout_Click" />
+                            <asp:Button ID="btnAdminlogout" CssClass ="btn btn-default navbar-btn " runat="server" Text="<%$Resources:Resource, Logout %>" OnClick="btnAdminlogout_Click" />
+                            <asp:DropDownList ID="ddlLanguages" runat="server" AutoPostBack="true">
+                                <asp:ListItem Text="English" Value="en-us" />
+                                <asp:ListItem Text="Turkish" Value="tr" />
+                            </asp:DropDownList>
                         </li>
                     </ul>
                 </div>
@@ -86,9 +90,9 @@
         <hr />
         <footer>
             <div class ="container ">
-                <p class ="pull-right "><a href ="#">&nbsp; &nbsp; Back to top &nbsp; &nbsp;</a></p>
-                <p class ="pull-right "><a href="Login.aspx"> User Login  </a></p> 
-                <p>&copy;2021 Kerazus.in &middot; <a href ="Default.aspx">Home</a>&middot;<a href ="#">About</a>&middot;<a href ="#">Contact</a>&middot;<a href ="#">Products</a> </p>
+                <p class ="pull-right "><a href ="#">&nbsp; &nbsp; <asp:Literal runat="server" Text="<%$Resources:Resource, Back to top %>" /> &nbsp; &nbsp;</a></p>
+                <p class ="pull-right "><a href="Login.aspx"> <asp:Literal runat="server" Text="<%$Resources:Resource, Admin Login %>" /></a></p> 
+                <p>&copy;2021 Kerazus.in &middot; <a href ="Default.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Home %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, About %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, ContactUs %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, Products %>" /></a> </p>
             </div>
 
         </footer>

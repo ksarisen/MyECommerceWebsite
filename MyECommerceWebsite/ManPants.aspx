@@ -6,10 +6,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 <div class="container">
-  <h2>Mas's Pants</h2>  
+  <h2><asp:Literal runat="server" Text="<%$Resources:Resource, MensPants %>" /></h2>  
 
     <div class="panel panel-primary">
-      <div class="panel-heading">Pants</div>
+      <div class="panel-heading"><asp:Literal runat="server" Text="<%$Resources:Resource, Pants %>" /></div>
       <div class="panel-body">
 
       <asp:TextBox ID="txtFilterGrid1Record" CssClass="form-control" runat="server" 

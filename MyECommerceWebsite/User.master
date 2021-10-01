@@ -39,38 +39,36 @@
                 </div>
                 <div class ="navbar-collapse collapse">
                     <ul class ="nav navbar-nav navbar-right">
-                         <li ><a href ="UserHome.aspx">Home</a> </li>
-                         <li ><a href="Default.aspx">About</a> </li>
-                        <li ><a href ="#">Contact US</a> </li>
+                         <li ><a href ="UserHome.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Home %>" /></a> </li>
+                         <li ><a href="Default.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, About %>" /></a> </li>
+                        <li ><a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, ContactUs %>" /></a> </li>
                         <li class ="drodown">
-                            <a href ="#" class ="dropdown-toggle" data-toggle="dropdown">Products<b class ="caret"></b></a>
+                            <a href ="#" class ="dropdown-toggle" data-toggle="dropdown"><asp:Literal runat="server" Text="<%$Resources:Resource, Products %>" /><b class ="caret"></b></a>
                             <ul class ="dropdown-menu ">
-                                <li> <a href ="Products.aspx">All Products</a></li>
+                                <li> <a href ="Products.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, AllProducts %>" /></a></li>
                                 <li role="separator" class ="divider "></li> 
-                                <li class ="dropdown-header ">Men</li>
+                                <li class ="dropdown-header "><asp:Literal runat="server" Text="<%$Resources:Resource, Men %>" /></li>
                                 <li role="separator" class ="divider "></li> 
-                                <li> <a href ="ManTop.aspx">Shirts</a></li>
-                                <li> <a href ="ManPants.aspx">Pants</a></li>
+                                <li> <a href ="ManTop.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Top %>" /></a></li>
+                                <li> <a href ="ManPants.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Pants %>" /></a></li>
                                 <li role="separator" class ="divider "></li>
-                                <li class ="dropdown-header ">Women</li>
+                                <li class ="dropdown-header "><asp:Literal runat="server" Text="<%$Resources:Resource, Women %>" /></li>
                                 <li role="separator" class ="divider "></li>
-                                <li> <a href ="WomanTop.aspx">Top</a></li>
-                                <li> <a href ="WomanLegging.aspx">Leggings</a></li>
+                                <li> <a href ="WomanTop.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Top %>" /></a></li>
+                                <li> <a href ="WomanLegging.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Leggings %>" /></a></li>
                             </ul>
 
                         </li>
-                        <li>
-                            <button id="btnCart" class="btn btn-primary navbar-btn" type="button">
-                                Cart<span class="badge" id="pCount" runat="server"></span>
-
-                            </button>
-                        </li>
                         <li >
-                             <asp:Button ID="btnLogin" CssClass ="btn btn-default navbar-btn " runat="server" Text="Login" OnClick="btnLogin_Click" />
-                            <asp:Button ID="btnlogout" CssClass ="btn btn-default navbar-btn " runat="server" Text="Logout" OnClick="btnlogout_Click" />
+                             <asp:Button ID="btnLogin" CssClass ="btn btn-default navbar-btn " runat="server" Text="<%$Resources:Resource, Login %>" OnClick="btnLogin_Click" />
+                            <asp:Button ID="btnlogout" CssClass ="btn btn-default navbar-btn " runat="server" Text="<%$Resources:Resource, Logout %>" OnClick="btnlogout_Click" />
                         </li>
                         <li>
                         <asp:Button ID="Button1" CssClass ="btn btn-link navbar-btn " runat="server" Text=""  />
+                            <asp:DropDownList ID="ddlLanguages" runat="server" AutoPostBack="true">
+                                <asp:ListItem Text="English" Value="en-us" />
+                                <asp:ListItem Text="Turkish" Value="tr" />
+                            </asp:DropDownList>
                         </li>
                     </ul>
                 </div>
@@ -89,12 +87,13 @@
     </div>
     </form>
      <!---Footer Contents Start here--->
+    
         <hr />
         <footer>
             <div class ="container ">
-             <p class ="pull-right "><a href ="#">&nbsp; &nbsp; Back to top &nbsp; &nbsp;</a></p>
-                <p class ="pull-right "><a href="AdminHome.aspx"> Admin Login  </a></p> 
-                <p>&copy;2021 Kerazus.in &middot; <a href ="Default.aspx">Home</a>&middot;<a href ="#">About</a>&middot;<a href ="#">Contact</a>&middot;<a href ="#">Products</a> </p>
+             <p class ="pull-right "><a href ="#">&nbsp; &nbsp; <asp:Literal runat="server" Text="<%$Resources:Resource, Back to top %>" /> &nbsp; &nbsp;</a></p>
+                <p class ="pull-right "><a href="AdminHome.aspx"> <asp:Literal runat="server" Text="<%$Resources:Resource, Admin Login %>" /> </a></p> 
+                <p>&copy;2021 Kerazus.in &middot; <a href ="Default.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Home %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, About %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, ContactUs %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, Products %>" /></a> </p>
             </div>
 
         </footer>

@@ -31,41 +31,42 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="Default.aspx">Home</a> </li>
-                        <li><a href="Default.aspx">About</a> </li>
-                        <li class="drodown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b
+                        <li class="active"><a href="Default.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Home %>" /></a> </li>
+                        <li><a href="Default.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, About %>" /></a> </li>
+                        <li class="drodown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><asp:Literal runat="server" Text="<%$Resources:Resource, Products %>" /><b
                             class="caret"></b></a>
                             <ul class ="dropdown-menu" >
-                                    <li class ="dropdown-header">Men</li>
+                                    <li class ="dropdown-header"><asp:Literal runat="server" Text="<%$Resources:Resource, Men %>" /></li>
                                     <li role="separator" class ="divider"></li>
-                                    <li><a href ="ManTop.aspx">Top</a></li>
-                                    <li><a href="ManPants.aspx">Pants</a></li>
+                                    <li><a href ="ManTop.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Top %>" /></a></li>
+                                    <li><a href="ManPants.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Pants %>" /></a></li>
                                     <li role="separator" class ="divider"></li>
-                                    <li class ="dropdown-header">Women</li>
+                                    <li class ="dropdown-header"><asp:Literal runat="server" Text="<%$Resources:Resource, Women %>" /></li>
                                     <li role="separator" class ="divider"></li>
-                                    <li><a href ="WomanTop.aspx">Top</a></li>
-                                    <li><a href ="WomanLegging.aspx">Leggings</a></li>
+                                    <li><a href ="WomanTop.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Top %>" /></a></li>
+                                    <li><a href ="WomanLegging.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Leggings %>" /></a></li>
                                 </ul>
                         </li>
-                        <li>
-                            <button id="btnCart" class="btn btn-primary navbar-btn " type="button">
-                                Cart <span class="badge " id="pCount" runat="server"></span>
-                            </button>
-                        </li>
-                        <li id="btnSignUP" runat="server"><a href="Register.aspx">Register</a> </li>
-                        <li id="btnSignIN" runat="server"><a href="Login.aspx">Login</a> </li>
+
+                        <li id="btnSignUP" runat="server"><a href="Register.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Register %>" /></a> </li>
+                        <li id="btnSignIN" runat="server"><a href="Login.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Login %>" /></a> </li>
                         <li>
                             <asp:Button ID="btnlogout" CssClass="btn btn-default navbar-btn " runat="server"
-                                Text="Logout" OnClick="btnlogout_Click" />
+                                Text="<%$Resources:Resource, Logout %>" OnClick="btnlogout_Click" />
+                            <asp:DropDownList ID="ddlLanguages" runat="server" AutoPostBack="true">
+                                <asp:ListItem Text="English" Value="en-us" />
+                                <asp:ListItem Text="Turkish" Value="tr" />
+                            </asp:DropDownList>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-         <!---Slayt Show--->
+        <!---Slayt Show--->
+        <br />
+        <br />
+        <br />
             <div class="container">
-                <h2>
-                    Carousel Example</h2>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -78,21 +79,21 @@
                         <div class="item active">
                             <img src="ImgSlider/1.jpg" alt="Los Angeles" style="width: 100%; height:251px">
                             <div class="carousel-caption">
-                                <h3>Women Shopping</h3>
+                                <h3><asp:Literal runat="server" Text="<%$Resources:Resource, Women Shopping %>" /></h3>
                                 <p>50% off</p>
-                                <p><a class="btn btn-lg btn-primary" href="Products.aspx" role="button">Buy Now</a></p></div>
+                                <p><a class="btn btn-lg btn-primary" href="Products.aspx" role="button"><asp:Literal runat="server" Text="<%$Resources:Resource, Buy now %>" /></a></p></div>
                         </div>
                         <div class="item">
                             <img src="ImgSlider/2.png" alt="Chicago" style="width: 100%; height:251px">>
                             <div class="carousel-caption">
-                                <h3>Ace mobile Shopping</h3>
+                                <h3><asp:Literal runat="server" Text="<%$Resources:Resource, Ace Mobile Shopping %>" /></h3>
                                 <p>20% off</p>
                             </div>
                         </div>
                         <div class="item">
                             <img src="ImgSlider/3.png" alt="New york" style="width: 100%; height:251px">
                             <div class="carousel-caption">
-                                <h3>On mobile you can get</h3>
+                                <h3><asp:Literal runat="server" Text="<%$Resources:Resource, On mobile you can get %>" /></h3>
                                 <p>25% off</p>
                             </div>
                         </div>
@@ -112,32 +113,30 @@
                 <div class="row ">
                     <div class="col-lg-4">
                         <img class="img-circle " src="Images/iphone12.jpeg" alt="thumb" width="140" height="140" />
-                        <h2>Mobiles</h2>
+                        <h2><asp:Literal runat="server" Text="<%$Resources:Resource, Mobiles %>" /></h2>
                         <p>
-                            A superpowerful chip. 5G speed. An advanced dual-camera system. 
-                            A Ceramic Shield front that's tougher than any smartphone glass. 
-                            And a bright, beautiful OLED display. iPhone 12 has it all — in two great sizes.</p>
+                            <asp:Literal runat="server" Text="<%$Resources:Resource, Phonedesc %>" /></p>
 
-                        <p><a class="btn btn-default " href="#" role="button">View More &raquo;</a></p>
+                        <p><a class="btn btn-default " href="#" role="button"><asp:Literal runat="server" Text="<%$Resources:Resource, View More %>" /> &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">
                         <img class="img-circle " src="Images/Shoes.jpeg" alt="thumb" width="140" height="140" />
-                        <h2>Footwear</h2>
-                        <p>Description for Shoes</p>
+                        <h2><asp:Literal runat="server" Text="<%$Resources:Resource, Footwear %>" /></h2>
+                        <p><asp:Literal runat="server" Text="<%$Resources:Resource, Description for Shoes %>" /></p>
                         <p>
-                            <a class="btn btn-default " href="#" role="button">View More &raquo;</a></p>
+                            <a class="btn btn-default " href="#" role="button"><asp:Literal runat="server" Text="<%$Resources:Resource, View More %>" /> &raquo;</a></p>
                     </div>
                     <div class="col-lg-4">
                         <img class="img-circle " src="Images/tshirt.jpeg" alt="thumb" width="140" height="140" />
-                        <h2>Clothings</h2>
-                        <p> Description for Clothings</p>
+                        <h2><asp:Literal runat="server" Text="<%$Resources:Resource, Clothings %>" /></h2>
+                        <p><asp:Literal runat="server" Text="<%$Resources:Resource, Description for Clothings %>" /></p>
                         <p>
-                            <a class="btn btn-default " href="#" role="button">View More &raquo;</a></p>
+                            <a class="btn btn-default " href="#" role="button"><asp:Literal runat="server" Text="<%$Resources:Resource, View More %>" /> &raquo;</a></p>
                     </div>
                 </div>
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        BOXING DAY DEAL</div>
+                        <asp:Literal runat="server" Text="<%$Resources:Resource, BOXING DAY DEAL %>" /></div>
                     <div class="panel-body">
                         <div class="row" style="padding-top: 50px">
                             <asp:Repeater ID="rptrProducts" runat="server">
@@ -171,7 +170,7 @@
                         </div>
                     </div>
                     <div class="panel-footer">
-                        Buy 50 mobiles and get a gift card</div>
+                        <asp:Literal runat="server" Text="<%$Resources:Resource, Buy 50 mobiles and get a gift card %>" /></div>
                 </div>
             </div>
 
@@ -181,9 +180,9 @@
     <footer>
             <div class ="container ">
                
-                <p class ="pull-right "><a href ="#">&nbsp; &nbsp; Back to top &nbsp; &nbsp;</a></p>
-                <p class ="pull-right "><a href="AdminHome.aspx"> Admin Login  </a></p>  
-                <p>&copy;2021 Kerazus.in &middot; <a href ="Default.aspx">Home</a>&middot;<a href ="#">About</a>&middot;<a href ="#">Contact</a>&middot;<a href ="#">Products</a> </p>
+                <p class ="pull-right "><a href ="#">&nbsp; &nbsp; <asp:Literal runat="server" Text="<%$Resources:Resource, Back to top %>" /> &nbsp; &nbsp;</a></p>
+                <p class ="pull-right "><a href="AdminHome.aspx"> <asp:Literal runat="server" Text="<%$Resources:Resource, Admin Login %>" /></a></p>  
+                <p>&copy;2021 Kerazus.in &middot; <a href ="Default.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Home %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, About %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, Contact %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, Products %>" /></a> </p>
             </div>
 
         </footer>

@@ -10,7 +10,7 @@ using System.Configuration;
 using System.IO;
 
 
-public partial class AddProduct : System.Web.UI.Page
+public partial class AddProduct : BasePage
 {
     public static String CS = ConfigurationManager.ConnectionStrings["MyShoppingDB"].ConnectionString;
     protected void Page_Load(object sender, EventArgs e)

@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class AddBrand : System.Web.UI.Page
+public partial class AddBrand : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

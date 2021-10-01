@@ -6,14 +6,14 @@
     <br />
 
             <div class ="form-horizontal ">
-                <h2>Add Brand</h2>
+                <h2><asp:Literal runat="server" Text="<%$Resources:Resource, AddBrand %>" /></h2>
                 <hr />
                 <div class ="form-group">
-                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="BrandName"></asp:Label>
+                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="<%$Resources:Resource, BrandName %>"></asp:Label>
                     <div class ="col-md-3 ">
 
                         <asp:TextBox ID="txtBrand" CssClass="form-control" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorBrandName" runat="server" CssClass ="text-danger " ErrorMessage="*plz Enter Brand name" ControlToValidate="txtBrand" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorBrandName" runat="server" CssClass ="text-danger " ErrorMessage="*Please Enter Brand name" ControlToValidate="txtBrand" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                 
@@ -21,7 +21,7 @@
                     <div class ="col-md-2 "> </div>
                     <div class ="col-md-4 ">
 
-                        <asp:Button ID="btnAddBrand" CssClass ="btn btn-success " runat="server" Text="Add" OnClick="btnAddBrand_Click"  />
+                        <asp:Button ID="btnAddBrand" CssClass ="btn btn-success " runat="server" Text="<%$Resources:Resource, Add %>" OnClick="btnAddBrand_Click"  />
                         
                     </div>
 
@@ -29,12 +29,12 @@
 
             </div>
 
-        <h1>Brands</h1>
+        <h1><asp:Literal runat="server" Text="<%$Resources:Resource, Brands %>" /></h1>
         <hr />
 
  <div class="panel panel-default">
 
-               <div class="panel-heading"> All Brands</div>
+               <div class="panel-heading"> <asp:Literal runat="server" Text="<%$Resources:Resource,AllBrands %>" /></div>
 
 
      <asp:repeater ID="rptrBrands" runat="server">
@@ -44,7 +44,7 @@
                   <thead>
                     <tr>
                         <th>#</th>
-                        <th>Brand</th>
+                        <th><asp:Literal runat="server" Text="<%$Resources:Resource, Brand %>" /></th>
                         <th>Edit</th>
 
                     </tr>

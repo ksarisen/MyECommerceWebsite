@@ -9,7 +9,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class AddSize : System.Web.UI.Page
+public partial class AddSize : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

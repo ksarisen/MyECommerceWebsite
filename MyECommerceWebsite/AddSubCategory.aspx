@@ -6,7 +6,7 @@
                 <br />
                 <br />
 
-                <h2>Add SubCategory</h2>
+                <h2><asp:Literal runat="server" Text="<%$Resources:Resource, AddSubCategory %>" /></h2>
                 <hr />
 
                  <div class ="form-group">
@@ -20,7 +20,7 @@
 
 
                 <div class ="form-group">
-                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="SubCategory Name"></asp:Label>
+                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="<%$Resources:Resource, SubCategoryName %>"></asp:Label>
                     <div class ="col-md-3 ">
 
                         <asp:TextBox ID="txtSubCategory" CssClass="form-control" runat="server"></asp:TextBox>
@@ -34,7 +34,7 @@
                     <div class ="col-md-2 "> </div>
                     <div class ="col-md-6 ">
 
-                        <asp:Button ID="btnAddSubCategory" CssClass ="btn btn-success " runat="server" Text="Add SubCategory" OnClick="btnAddSubCategory_Click"    />
+                        <asp:Button ID="btnAddSubCategory" CssClass ="btn btn-success " runat="server" Text="<%$Resources:Resource, AddSubCategory %>" OnClick="btnAddSubCategory_Click"    />
                         
                     </div>
                 </div>
@@ -42,7 +42,7 @@
 
             </div>
 
-         <h1>Sub Categories</h1>
+         <h1><asp:Literal runat="server" Text="<%$Resources:Resource, SubCategories %>" /></h1>
         <hr />
 
  <div class="panel panel-default">

@@ -10,36 +10,36 @@
           <div class="row">
                <div class="col-sm-6">
                   <div class="form-group">
-                       <label> Enter ID:</label>
+                       <label> ID:</label>
                        <asp:TextBox ID="txtID" CssClass="form-control" runat="server" AutoPostBack="true"  ontextchanged="txtID_TextChanged"></asp:TextBox>
                   </div>
 
                   <div class="form-group">
-                       <label> Enter Size (L,S,XL)</label>
+                       <label> <asp:Literal runat="server" Text="<%$Resources:Resource, Size %>" /> (S,M,L,XL)</label>
                        <asp:TextBox ID="txtSize" CssClass="form-control" runat="server"></asp:TextBox>
                   </div>
 
                   <div class="form-group">
-                       <label> Select Brand</label>
+                       <label> <asp:Literal runat="server" Text="<%$Resources:Resource, Brand %>" /></label>
                         <asp:DropDownList ID="ddlBrand" CssClass ="form-control" runat="server"></asp:DropDownList>
                   </div>
 
                   <div class="form-group">
-                       <label> Select Category</label>
+                       <label> <asp:Literal runat="server" Text="<%$Resources:Resource, Category %>" /></label>
                         <asp:DropDownList ID="ddlCategory" CssClass ="form-control" runat="server" OnSelectedIndexChanged="ddlCategory_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                   </div>
 
                   <div class="form-group">
-                       <label> Sub Category</label>
+                       <label> <asp:Literal runat="server" Text="<%$Resources:Resource, SubCategory %>" /></label>
                         <asp:DropDownList ID="ddlSubCategory" CssClass ="form-control" runat="server"></asp:DropDownList>
                   </div>
 
                   <div class="form-group">
-                       <label> Gender</label>
+                       <label> <asp:Literal runat="server" Text="<%$Resources:Resource, Gender %>" /></label>
                        <asp:DropDownList ID="ddlGender" CssClass ="form-control" runat="server"></asp:DropDownList>
                   </div>
                   <div class="form-group">
-                  <asp:Button ID="btnUpdateSubCategory" CssClass="btn btn-primary" runat="server" Text="UPDATE" onclick="btnUpdateSubCategory_Click" />
+                  <asp:Button ID="btnUpdateSubCategory" CssClass="btn btn-primary" runat="server" Text="<%$Resources:Resource, Update %>" onclick="btnUpdateSubCategory_Click" />
                   </div>
 
                
@@ -49,7 +49,7 @@
 
                 <div class="row">
                 <div class="col-md-12">
-                <h4 class="alert-info text-center"> All Size</h4>
+                <h4 class="alert-info text-center"> <asp:Literal runat="server" Text="<%$Resources:Resource, AllSizes %>" /></h4>
                 <br />
                  <asp:TextBox ID="txtFilterGrid1Record" style="border:2px solid blue" CssClass="form-control" runat="server" placeholder="Search Category...." onkeyup="Search_Gridview(this)"></asp:TextBox>
                 <hr />

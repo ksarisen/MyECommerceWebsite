@@ -10,7 +10,7 @@ using System.Configuration;
 using System.Globalization;
 using System.Threading;
 
-public partial class ManTop : System.Web.UI.Page
+public partial class ManTop : BasePage
 {
     public static String CS = ConfigurationManager.ConnectionStrings["MyShoppingDB"].ConnectionString;
     protected void Page_Load(object sender, EventArgs e)

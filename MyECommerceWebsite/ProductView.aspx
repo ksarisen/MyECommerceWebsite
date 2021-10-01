@@ -7,18 +7,11 @@
     <br />
 
     <br /><br /><br />
-    <button id="btnCart2" runat="server" class="btn btn-primary navbar-btn pull-right" onserverclick="btnCart2_ServerClick" type="button">
-                        Cart <span id="CartBadge" runat="server" class="badge">0</span>
-    </button>
     <br />
     <div style="padding-top:50px">
 
 
     <!--- Success Alert --->
-                        <div id="divSuccess" runat="server" class="alert alert-success alert-dismissible fade in h4">
-                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                            <strong>Success! </strong>Item successfully added to cart. <a href="Cart.aspx">View Cart</a>
-                        </div>
 
         <div class="col-md-5">
             <div style="max-width:480px" class="thumbnail">
@@ -71,7 +64,7 @@
                 <span class="proOgPriceView"><%#Eval("PPrice","{0:c}") %></span> <span class="proPriceDiscountView"> Off <%# string.Format("{0}",Convert.ToInt64(Eval("PPrice"))-Convert.ToInt64(Eval("PSelPrice"))) %></span><p class="proPriceView"> <%#Eval("PSelPrice","{0:c}") %></p>
             </div>
             <div >
-                <h5 class="h5size"> SIZE</h5>
+                <h5 class="h5size"> <asp:Literal runat="server" Text="<%$Resources:Resource, Size %>" /></h5>
                 <div>
                     <asp:radiobuttonlist ID="rblSize" runat="server" RepeatDirection="Horizontal" >
                         <asp:ListItem Value="S" Text="S"></asp:ListItem>
@@ -82,17 +75,16 @@
                 </div>
             </div>
             <div class="divDet1">
-                <asp:button ID="btnAddtoCart" CssClass="mainButton" runat="server" text="ADD TO CART" OnClick="btnAddtoCart_Click"/>
            <asp:Label ID="lblError" CssClass ="text-danger " runat="server" ></asp:Label>
                 
             </div>
             <div class="divDet1">
-                <h5 class="h5size"> Description</h5>
+                <h5 class="h5size"> <asp:Literal runat="server" Text="<%$Resources:Resource, Description %>" /></h5>
                 <p>   <%#Eval("PDescription") %>          </p>
 
-                 <h5 class="h5size"> Product Details</h5>
+                 <h5 class="h5size"> <asp:Literal runat="server" Text="<%$Resources:Resource, ProductDetails %>" /></h5>
                 <p>   <%#Eval("PProductDetails") %>     </p>
-                 <h5 class="h5size"> Material & Care</h5>
+                 <h5 class="h5size"> <asp:Literal runat="server" Text="<%$Resources:Resource, MaterialsAndCare %>" /></h5>
                 <p> <%#Eval("PMaterialCare") %></p>
             </div>
             <div >

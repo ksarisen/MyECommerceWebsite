@@ -10,17 +10,16 @@ using System.Configuration;
 using System.Globalization;
 using System.Threading;
 
-public partial class ProductView : System.Web.UI.Page
+public partial class ProductView : BasePage
 {
     public static String CS = ConfigurationManager.ConnectionStrings["MyShoppingDB"].ConnectionString;
-    readonly Int32 myQty = 1;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Request.QueryString["PID"] != null)
         {
             if (!IsPostBack)
             {
-                divSuccess.Visible = false;
+                //divSuccess.Visible = false;
                 BindProductImage();
                 BindProductDetails();
             }

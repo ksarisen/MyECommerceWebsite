@@ -9,22 +9,22 @@
            <div class="row">
                <div class="col-md-3">
                <div class="form-group">
-               <label>Enter SubCatID:</label>
+               <label>ID:</label>
                   <asp:TextBox ID="txtID" CssClass="form-control" runat="server" AutoPostBack="true"  ontextchanged="txtID_TextChanged"></asp:TextBox> 
                </div>
                   
                   <div class="form-group">
                       <asp:Button ID="btnUpdateSubCategory" CssClass="btn btn-primary" runat="server" 
-                          Text="UPDATE" onclick="btnUpdateSubCategory_Click" />
+                          Text="<%$Resources:Resource, Update %>"  onclick="btnUpdateSubCategory_Click" />
                   </div>
                </div>
                <div class="col-md-3">
-                <label>Select Category:</label>
+                <label><asp:Literal runat="server" Text="<%$Resources:Resource, Category %>" /></label>
                    <asp:DropDownList ID="ddlMainCategory" CssClass="form-control" runat="server">
                    </asp:DropDownList>
                </div>
                <div class="col-md-3">
-               <label>Sub Category:</label>
+               <label><asp:Literal runat="server" Text="<%$Resources:Resource, SubCategory %>" /></label>
                    <asp:TextBox ID="txtSubCategory" CssClass="form-control" runat="server"></asp:TextBox>
                </div>
            
@@ -34,7 +34,7 @@
         <div class="col-md-4">
         <div class="row">
                 <div class="col-md-12">
-                <h4 class="alert-info text-center"> All Category</h4>
+                <h4 class="alert-info text-center"> <asp:Literal runat="server" Text="<%$Resources:Resource, AllSubCategories %>" /></h4>
                 <br />
                  <asp:TextBox ID="txtFilterGrid1Record" style="border:2px solid blue" CssClass="form-control" runat="server" placeholder="Search Category...." onkeyup="Search_Gridview(this)"></asp:TextBox>
                 <hr />

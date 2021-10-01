@@ -6,14 +6,14 @@
                 <br />
                 <br />
 
-                <h2>Add Category</h2>
+                <h2><asp:Literal runat="server" Text="<%$Resources:Resource, AddCategory %>" /></h2>
                 <hr />
                 <div class ="form-group">
-                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="Category Name"></asp:Label>
+                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="<%$Resources:Resource, CategoryName %>"></asp:Label>
                     <div class ="col-md-3 ">
 
                         <asp:TextBox ID="txtCategory" CssClass="form-control" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatortxtCategoryName" runat="server" CssClass ="text-danger " ErrorMessage="*please Enter Brandname" ControlToValidate="txtCategory" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatortxtCategoryName" runat="server" CssClass ="text-danger " ErrorMessage="*please Enter Category Name" ControlToValidate="txtCategory" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                 
@@ -23,7 +23,7 @@
                     <div class ="col-md-2 "> </div>
                     <div class ="col-md-6 ">
 
-                        <asp:Button ID="btnAddtxtCategory" CssClass ="btn btn-success " runat="server" Text="Add Category" OnClick="btnAddtxtCategory_Click"   />
+                        <asp:Button ID="btnAddtxtCategory" CssClass ="btn btn-success " runat="server" Text="<%$Resources:Resource, AddCategory %>" OnClick="btnAddtxtCategory_Click"   />
                         
                     </div>
                 </div>
@@ -31,12 +31,12 @@
 
             </div>
 
-             <h1>Categories</h1>
+             <h1><asp:Literal runat="server" Text="<%$Resources:Resource, Categories %>" /></h1>
         <hr />
 
  <div class="panel panel-default">
 
-               <div class="panel-heading"> All Categories</div>
+               <div class="panel-heading"> <asp:Literal runat="server" Text="<%$Resources:Resource, AllCategories %>" /></div>
 
 
      <asp:repeater ID="rptrCategory" runat="server">
@@ -46,7 +46,7 @@
                   <thead>
                     <tr>
                         <th>#</th>
-                        <th>Categories</th>
+                        <th><asp:Literal runat="server" Text="<%$Resources:Resource, Categories %>" /></th>
                         <th>Edit</th>
 
                     </tr>

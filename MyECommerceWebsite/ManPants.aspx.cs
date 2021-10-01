@@ -11,7 +11,8 @@ using System.Globalization;
 using System.Threading;
 
 
-public partial class ManPants : System.Web.UI.Page
+
+public partial class ManPants : BasePage
 {
     public static String CS = ConfigurationManager.ConnectionStrings["MyShoppingDB"].ConnectionString;
     protected void Page_Load(object sender, EventArgs e)

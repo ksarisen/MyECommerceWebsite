@@ -9,7 +9,7 @@
   <h2>Woman Legging</h2>  
 
     <div class="panel panel-primary">
-      <div class="panel-heading">Woman Legging</div>
+      <div class="panel-heading"><asp:Literal runat="server" Text="<%$Resources:Resource, WomenLeggings %>" /></div>
       <div class="panel-body">
 
       <asp:TextBox ID="txtFilterGrid1Record" CssClass="form-control" runat="server" 

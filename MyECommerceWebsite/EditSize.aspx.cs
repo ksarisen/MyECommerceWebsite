@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class EditSize : System.Web.UI.Page
+public partial class EditSize : BasePage
 {
     string BrandID = "";
     string SizeName = "";

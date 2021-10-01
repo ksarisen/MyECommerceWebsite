@@ -7,12 +7,21 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Globalization;
 
-public partial class UserHome : System.Web.UI.Page
+public partial class UserHome : BasePage
 {
     public static String CS = ConfigurationManager.ConnectionStrings["MyShoppingDB"].ConnectionString;
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!this.IsPostBack)
+        {
+            if (ddlLanguages.Items.FindByValue(CultureInfo.CurrentCulture.Name) != null)
+            {
+                ddlLanguages.Items.FindByValue(CultureInfo.CurrentCulture.Name).Selected = true;
+            }
+        }
+
         if (Session["Username"] != null)
         {
             btnlogout.Visible = true;
@@ -30,7 +39,6 @@ public partial class UserHome : System.Web.UI.Page
 
     protected void btnlogout_Click(object sender, EventArgs e)
     {
-        //Session.Abandon();
         Session["Username"] = null;
         Response.Redirect("~/Default.aspx");
 

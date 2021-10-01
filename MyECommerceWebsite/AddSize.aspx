@@ -6,11 +6,11 @@
                 <br />
                 <br />
 
-                <h2>Add Size</h2>
+                <h2><asp:Literal runat="server" Text="<%$Resources:Resource, AddSize %>" /></h2>
                 <hr />
 
                 <div class ="form-group">
-                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="Size Name"></asp:Label>
+                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="<%$Resources:Resource, SizeName %>" ></asp:Label>
                     <div class ="col-md-3 ">
 
                         <asp:TextBox ID="txtSize" CssClass="form-control" runat="server"></asp:TextBox>
@@ -19,7 +19,7 @@
                 </div>
 
                  <div class ="form-group">
-                    <asp:Label ID="Label3" CssClass ="col-md-2 control-label " runat="server" Text="Brand"></asp:Label>
+                    <asp:Label ID="Label3" CssClass ="col-md-2 control-label " runat="server" Text="<%$Resources:Resource, Brand %>"></asp:Label>
                     <div class ="col-md-3 ">
 
                         <asp:DropDownList ID="ddlBrand" CssClass ="form-control" runat="server"></asp:DropDownList>
@@ -28,7 +28,7 @@
                 </div>
 
                  <div class ="form-group">
-                    <asp:Label ID="Label4" CssClass ="col-md-2 control-label " runat="server" Text="Category"></asp:Label>
+                    <asp:Label ID="Label4" CssClass ="col-md-2 control-label " runat="server" Text="<%$Resources:Resource, Category %>" ></asp:Label>
                     <div class ="col-md-3 ">
 
                         <asp:DropDownList ID="ddlCategory" CssClass ="form-control" runat="server" OnSelectedIndexChanged="ddlCategory_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
@@ -38,7 +38,7 @@
                 
 
                  <div class ="form-group">
-                    <asp:Label ID="Label5" CssClass ="col-md-2 control-label " runat="server" Text="Sub Category"></asp:Label>
+                    <asp:Label ID="Label5" CssClass ="col-md-2 control-label " runat="server" Text="<%$Resources:Resource, SubCategory %>" ></asp:Label>
                     <div class ="col-md-3 ">
 
                         <asp:DropDownList ID="ddlSubCategory" CssClass ="form-control" runat="server"></asp:DropDownList>
@@ -47,7 +47,7 @@
                 </div>
 
                  <div class ="form-group">
-                    <asp:Label ID="Label6" CssClass ="col-md-2 control-label " runat="server" Text="Gender"></asp:Label>
+                    <asp:Label ID="Label6" CssClass ="col-md-2 control-label " runat="server" Text="<%$Resources:Resource, Gender %>"></asp:Label>
                     <div class ="col-md-3 ">
 
                         <asp:DropDownList ID="ddlGender" CssClass ="form-control" runat="server"></asp:DropDownList>
@@ -63,7 +63,7 @@
                     <div class ="col-md-2 "> </div>
                     <div class ="col-md-6 ">
 
-                        <asp:Button ID="btnAddSize" CssClass ="btn btn-success " runat="server" Text="Add Size" OnClick="btnAddSize_Click"    />
+                        <asp:Button ID="btnAddSize" CssClass ="btn btn-success " runat="server" Text="<%$Resources:Resource, AddSize %>" OnClick="btnAddSize_Click"    />
                         
                     </div>
                 </div>
@@ -71,12 +71,12 @@
 
             </div>
 
-<h1>Size</h1>
+<h1><asp:Literal runat="server" Text="<%$Resources:Resource, Size %>" /></h1>
         <hr />
 
  <div class="panel panel-default">
 
-               <div class="panel-heading"> All Sizes</div>
+               <div class="panel-heading"> <asp:Literal runat="server" Text="<%$Resources:Resource, AllSizes %>" /></div>
 
 
      <asp:repeater ID="rptrSize" runat="server">
@@ -86,11 +86,11 @@
                   <thead>
                     <tr>
                         <th>#</th>
-                        <th>Size</th>
-                        <th>Brand</th>
-                        <th>Category</th>
-                         <th>Sub Category</th>
-                         <th>Gender</th>
+                        <th><asp:Literal runat="server" Text="<%$Resources:Resource, Size %>" /></th>
+                        <th><asp:Literal runat="server" Text="<%$Resources:Resource, Brand %>" /></th>
+                        <th><asp:Literal runat="server" Text="<%$Resources:Resource, Category %>" /></th>
+                         <th><asp:Literal runat="server" Text="<%$Resources:Resource, SubCategory %>" /></th>
+                         <th><asp:Literal runat="server" Text="<%$Resources:Resource, Gender %>" /></th>
                         
 
                     </tr>

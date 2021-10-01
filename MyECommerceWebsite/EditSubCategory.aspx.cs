@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class EditSubCategory : System.Web.UI.Page
+public partial class EditSubCategory : BasePage
 {
     string ID = "";
     string SCName = "";

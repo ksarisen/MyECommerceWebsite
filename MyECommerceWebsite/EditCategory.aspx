@@ -17,7 +17,7 @@
          <div class="row">
          <div class="col-md-6">
          <div class="form-group">
-                        <label>Enter Category ID:</label>
+                        <label><asp:Literal runat="server" Text="<%$Resources:Resource, EnterCategoryID %>" /></label>
                         <asp:TextBox ID="txtID" CssClass="form-control" runat="server" AutoPostBack="true"  ontextchanged="txtID_TextChanged"></asp:TextBox> 
                         
                     </div>
@@ -27,13 +27,13 @@
          </div>
          <div class="col-md-6">
          <div class="form-group">
-                        <label>Enter Category Name:</label>
+                        <label><asp:Literal runat="server" Text="<%$Resources:Resource,EnterCategoryName %>" /></label>
                         <asp:TextBox ID="txtUpdateCatName" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
          
           <div class="form-group">
                         <asp:Button ID="btnUpdateBrand" CssClass ="btn btn-primary " runat="server" 
-                            Text="UPDATE" onclick="btnUpdateBrand_Click"  />
+                            Text="<%$Resources:Resource, Update %>" onclick="btnUpdateBrand_Click"  />
                     </div>
          </div>
         
@@ -44,7 +44,7 @@
           
              <div class="row">
                 <div class="col-md-12">
-                <h4 class="alert-info text-center"> All Category</h4>
+                <h4 class="alert-info text-center"> <asp:Literal runat="server" Text="<%$Resources:Resource, AllCategories %>" />h4>
                 <br />
                  <asp:TextBox ID="txtFilterGrid1Record" style="border:2px solid blue" CssClass="form-control" runat="server" placeholder="Search Category...." onkeyup="Search_Gridview(this)"></asp:TextBox>
                 <hr />

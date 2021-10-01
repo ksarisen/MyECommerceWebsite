@@ -34,26 +34,30 @@
                 </div>
                 <div class ="navbar-collapse collapse">
                     <ul class ="nav navbar-nav navbar-right">
-                        <li ><a href ="Default.aspx">Home</a> </li>
-                         <li ><a href="Default.aspx">About</a> </li>
-                        <li ><a href ="#">Contact US</a> </li>
+                        <li ><a href ="Default.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Home %>" /></a> </li>
+                         <li ><a href="Default.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, About %>" /></a> </li>
+                        <li ><a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, ContactUs %>" /></a> </li>
                         <li class ="drodown">
                             <a href ="#" class ="dropdown-toggle" data-toggle="dropdown">Products<b class ="caret"></b></a>
                             <ul class ="dropdown-menu ">
-                                <li class ="dropdown-header">Men</li>
+                                <li class ="dropdown-header"><asp:Literal runat="server" Text="<%$Resources:Resource, Men %>" /></li>
                                     <li role="separator" class ="divider"></li>
-                                    <li><a href ="ManTop.aspx">Top</a></li>
-                                    <li><a href="ManPants.aspx">Pants</a></li>
+                                    <li><a href ="ManTop.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Top %>" /></a></li>
+                                    <li><a href="ManPants.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Pants %>" /></a></li>
                                     <li role="separator" class ="divider"></li>
-                                    <li class ="dropdown-header">Women</li>
+                                    <li class ="dropdown-header"><asp:Literal runat="server" Text="<%$Resources:Resource, Women %>" /></li>
                                     <li role="separator" class ="divider"></li>
-                                    <li><a href ="WomanTop.aspx">Top</a></li>
-                                    <li><a href ="WomanLegging.aspx">Leggings</a></li>
+                                    <li><a href ="WomanTop.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Top %>" /></a></li>
+                                    <li><a href ="WomanLegging.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Leggings %>" /></a></li>
                             </ul>
 
                         </li>
-                        <li ><a href ="Register.aspx">Register</a> </li>
-                        <li class ="active"><a href ="Login.aspx">Login</a> </li>
+                        <li ><a href ="Register.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Register %>" /></a> </li>
+                        <li class ="active"><a href ="Login.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Login %>" /></a> </li>
+                        <asp:DropDownList ID="ddlLanguages" runat="server" AutoPostBack="true">
+                                <asp:ListItem Text="English" Value="en-us" />
+                                <asp:ListItem Text="Turkish" Value="tr" />
+                            </asp:DropDownList>
                     </ul>
                 </div>
             </div>
@@ -71,17 +75,17 @@
                 <h2>Login Form</h2>
                 <hr />
                 <div class ="form-group">
-                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="UserName"></asp:Label>
+                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="<%$Resources:Resource, Username %>"></asp:Label>
                     <div class ="col-md-3 ">
 
                         <asp:TextBox ID="txtUsername" CssClass="form-control" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" runat="server" CssClass ="text-danger " ErrorMessage="*plz Enter Username" ControlToValidate="txtUsername" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" runat="server" CssClass ="text-danger " ErrorMessage="*Please Enter Username" ControlToValidate="txtUsername" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                 </div>
 
 
                 <div class ="form-group">
-                    <asp:Label ID="Label2" CssClass ="col-md-2 control-label " runat="server" Text="Password"></asp:Label>
+                    <asp:Label ID="Label2" CssClass ="col-md-2 control-label " runat="server" Text="<%$Resources:Resource, Password %>"></asp:Label>
                     <div class ="col-md-3 ">
 
                         <asp:TextBox ID="txtPass" CssClass="form-control" runat="server" TextMode="Password"></asp:TextBox>
@@ -95,7 +99,7 @@
                     <div class ="col-md-6 ">
 
                         <asp:CheckBox ID="CheckBox1" runat="server" />
-                        <asp:Label ID="Label3" CssClass =" control-label " runat="server" Text="Remember me"></asp:Label>
+                        <asp:Label ID="Label3" CssClass =" control-label " runat="server" Text="<%$Resources:Resource, RememberMe %>" ></asp:Label>
                     </div>
                 </div>
 
@@ -104,8 +108,8 @@
                     <div class ="col-md-2 "> </div>
                     <div class ="col-md-6 ">
 
-                        <asp:Button ID="btnLogin" CssClass ="btn btn-success " runat="server" Text="Login&raquo;" OnClick="btnLogin_Click" />
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>
+                        <asp:Button ID="btnLogin" CssClass ="btn btn-success " runat="server" Text="<%$Resources:Resource, Login %>" OnClick="btnLogin_Click" />
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Register.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Register %>" /></asp:HyperLink>
                     </div>
                 </div>               
 
@@ -128,9 +132,9 @@
         <hr />
         <footer>
             <div class ="alert alert-danger ">
-             <p class ="pull-right "><a href ="#">&nbsp; &nbsp; Back to top &nbsp; &nbsp;</a></p>
-                <p class ="pull-right "><a href="AdminHome.aspx"> Admin Login  </a></p> 
-                <p>&copy;2021 Kerazus.in &middot; <a href ="Default.aspx">Home</a>&middot;<a href ="#">About</a>&middot;<a href ="#">Contact</a>&middot;<a href ="#">Products</a> </p>
+             <p class ="pull-right "><a href ="#">&nbsp; &nbsp; <asp:Literal runat="server" Text="<%$Resources:Resource, Back to top %>" /> &nbsp; &nbsp;</a></p>
+                <p class ="pull-right "><a href="AdminHome.aspx"> <asp:Literal runat="server" Text="<%$Resources:Resource, Admin Login %>" />  </a></p> 
+                <p>&copy;2021 Kerazus.in &middot; <a href ="Default.aspx"><asp:Literal runat="server" Text="<%$Resources:Resource, Home %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, About %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, ContactUs %>" /></a>&middot;<a href ="#"><asp:Literal runat="server" Text="<%$Resources:Resource, Products %>" /></a> </p>
             </div>
 
         </footer>

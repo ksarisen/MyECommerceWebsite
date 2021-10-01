@@ -8,7 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-public partial class AddCategory : System.Web.UI.Page
+public partial class AddCategory : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {

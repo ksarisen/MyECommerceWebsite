@@ -10,11 +10,18 @@ using System.Configuration;
 using System.Globalization;
 using System.Threading;
 
-public partial class _Default : System.Web.UI.Page
+public partial class _Default : BasePage
 {
     public static String CS = ConfigurationManager.ConnectionStrings["MyShoppingDB"].ConnectionString;
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!this.IsPostBack)
+        {
+            if (ddlLanguages.Items.FindByValue(CultureInfo.CurrentCulture.Name) != null)
+            {
+                ddlLanguages.Items.FindByValue(CultureInfo.CurrentCulture.Name).Selected = true;
+            }
+        }
 
         if (Request.QueryString["UserLogin"] == "YES")
         {
@@ -65,10 +72,6 @@ public partial class _Default : System.Web.UI.Page
                     sda.Fill(dt);
                     rptrProducts.DataSource = dt;
                     rptrProducts.DataBind();
-                    if (dt.Rows.Count <= 0)
-                    {
-                        pCount.InnerHtml = "0";
-                    }
                 }
             }
         }

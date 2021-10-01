@@ -13,7 +13,7 @@ Man's Top
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
 <div class="container">
-  <h2>Mas's Top</h2>  
+  <h2><asp:Literal runat="server" Text="<%$Resources:Resource, MensTop %>" /></h2>  
 
     <div class="panel panel-primary">
       <div class="panel-heading">Shirts</div>

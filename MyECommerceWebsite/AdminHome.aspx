@@ -6,6 +6,6 @@
     <br />
     <br />
 
-    <h2>Welcome Admin</h2>
+    <h2><asp:Literal runat="server" Text="<%$Resources:Resource, WelcomeAdmin %>" /></h2>
 </asp:Content>
 

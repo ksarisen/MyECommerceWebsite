@@ -6,10 +6,10 @@
                 <br />
                 <br />
 
-                <h2>Add Gender</h2>
+                <h2><asp:Literal runat="server" Text="<%$Resources:Resource, AddGender %>" /></h2>
                 <hr />
                 <div class ="form-group">
-                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="Gender"></asp:Label>
+                    <asp:Label ID="Label1" CssClass ="col-md-2 control-label " runat="server" Text="<%$Resources:Resource, Gender %>"></asp:Label>
                     <div class ="col-md-3 ">
 
                         <asp:TextBox ID="txtGender" CssClass="form-control" runat="server"></asp:TextBox>
@@ -21,7 +21,7 @@
                     <div class ="col-md-2 "> </div>
                     <div class ="col-md-6 ">
 
-                        <asp:Button ID="btnAddBrand" CssClass ="btn btn-success " runat="server" Text="Add" OnClick="btnAddBrand_Click"  />
+                        <asp:Button ID="btnAddBrand" CssClass ="btn btn-success " runat="server" Text="<%$Resources:Resource, Add %>" OnClick="btnAddBrand_Click"  />
                         
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                   <thead>
                     <tr>
                         <th>#</th>
-                        <th>Gender</th>
+                        <th><asp:Literal runat="server" Text="<%$Resources:Resource, Gender %>" /></th>
                         <th>Edit</th>
 
                     </tr>

@@ -7,13 +7,19 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
+using System.Globalization;
 
-public partial class Login : System.Web.UI.Page
+public partial class Login : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
+            if (ddlLanguages.Items.FindByValue(CultureInfo.CurrentCulture.Name) != null)
+            {
+                ddlLanguages.Items.FindByValue(CultureInfo.CurrentCulture.Name).Selected = true;
+            }
+
             if (Request.Cookies["UNAME"] != null && Request.Cookies["UPWD"] != null)
             {
                 txtUsername.Text = Request.Cookies["UNAME"].Value;
