@@ -1,4 +1,4 @@
 # My E-CommerceWebsite
 ASP.NET E-Commerce Website
 
-E-Commerce website that I built was the part of the internship I did at NTT Data Business Solutions with using a database
+The E-Commerce website that I built was part of the internship I did at NTT Data Business Solutions using a database
